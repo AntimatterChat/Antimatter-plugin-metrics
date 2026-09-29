@@ -20,7 +20,7 @@ import (
 	"github.com/prometheus/prometheus/scrape"
 	"github.com/prometheus/prometheus/tsdb"
 
-	root "github.com/mattermost/mattermost-plugin-metrics"
+	root "github.com/antimatterchat/antimatter-plugin-metrics"
 
 	mmModel "github.com/mattermost/mattermost/server/public/model"
 	"github.com/mattermost/mattermost/server/public/plugin"

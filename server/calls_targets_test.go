@@ -15,7 +15,7 @@ import (
 
 	promModel "github.com/prometheus/common/model"
 
-	pluginMocks "github.com/mattermost/mattermost-plugin-metrics/server/mocks/github.com/mattermost/mattermost/server/public/plugin"
+	pluginMocks "github.com/antimatterchat/antimatter-plugin-metrics/server/mocks/github.com/mattermost/mattermost/server/public/plugin"
 )
 
 func TestResolveURL(t *testing.T) {

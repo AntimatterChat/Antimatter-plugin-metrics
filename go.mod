@@ -1,4 +1,4 @@
-module github.com/mattermost/mattermost-plugin-metrics
+module github.com/antimatterchat/antimatter-plugin-metrics
 
 go 1.21
 

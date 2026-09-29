@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	root "github.com/mattermost/mattermost-plugin-metrics"
+	root "github.com/antimatterchat/antimatter-plugin-metrics"
 
 	"github.com/mattermost/mattermost/server/public/model"
 	"github.com/mattermost/mattermost/server/public/pluginapi/cluster"
