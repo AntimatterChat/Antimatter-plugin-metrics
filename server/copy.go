@@ -86,7 +86,7 @@ func copyFromFileStore(dst, src string, b filestore.FileBackend) error {
 	if (listErr != nil && errors.As(listErr, &pathError)) || len(entries) == 0 {
 		// in s3 we should check whether the entry count is 0 because
 		// the API doesn't return an error if the object is a file.
-		// something to check further with https://mattermost.atlassian.net/browse/MM-57034
+		// something to check further with MM-57034
 		//
 		// For local filesstore, we know that we would get a path error and that
 		// means that this is a single file. Alternatively, we can improve the API by adding

@@ -6,6 +6,8 @@ package main
 import "time"
 
 const (
+	// PluginName prefixes KV keys and plugin-data storage paths; the legacy value is kept so
+	// existing installations keep finding their data.
 	PluginName         = "mattermost-plugin-metrics"
 	tsdbDirName        = "data"
 	metaFileName       = "meta.json"

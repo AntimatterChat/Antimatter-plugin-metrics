@@ -18,9 +18,9 @@ import (
 	"github.com/mattermost/mattermost/server/public/model"
 )
 
-// configuration captures the plugin's external configuration as exposed in the Mattermost server
+// configuration captures the plugin's external configuration as exposed in the Antimatter server
 // configuration, as well as values computed from the configuration. Any public fields will be
-// deserialized from the Mattermost server configuration in OnConfigurationChange.
+// deserialized from the Antimatter server configuration in OnConfigurationChange.
 //
 // As plugins are inherently concurrent (hooks being called asynchronously), and the plugin
 // configuration can change at any time, access to the configuration must be synchronized. The
@@ -208,7 +208,7 @@ func (p *Plugin) OnConfigurationChange() error {
 func (p *Plugin) loadConfig() error {
 	cfg := new(configuration)
 
-	// Load the public configuration fields from the Mattermost server configuration.
+	// Load the public configuration fields from the Antimatter server configuration.
 	if err := p.API.LoadPluginConfiguration(cfg); err != nil {
 		return fmt.Errorf("loadConfig: failed to load plugin configuration: %w", err)
 	}

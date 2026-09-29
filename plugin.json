@@ -1,10 +1,10 @@
 {
     "id": "com.mattermost.mattermost-plugin-metrics",
-    "name": "Mattermost Metrics Plugin",
-    "description": "This plugin serves as a openmetrics scraper for Mattermost. It can be used to store metrics data without Prometheus.",
-    "homepage_url": "https://github.com/mattermost/mattermost-plugin-metrics",
-    "support_url": "https://github.com/mattermost/mattermost-plugin-metrics/issues",
-    "release_notes_url": "https://github.com/mattermost/mattermost-plugin-metrics/releases/tag/v0.8.0-rc1",
+    "name": "Antimatter Metrics Plugin",
+    "description": "This plugin serves as a openmetrics scraper for Antimatter. It can be used to store metrics data without Prometheus.",
+    "homepage_url": "https://github.com/antimatterchat/antimatter-plugin-metrics",
+    "support_url": "https://github.com/antimatterchat/antimatter-plugin-metrics/issues",
+    "release_notes_url": "https://github.com/antimatterchat/antimatter-plugin-metrics/releases/tag/v0.8.0-rc1",
     "icon_path": "assets/starter-template-icon.svg",
     "version": "0.8.0-rc1",
     "min_server_version": "12.0.0",
@@ -18,7 +18,7 @@
         "bundle_path": "webapp/dist/main.js"
     },
     "settings_schema": {
-        "header": "Collect and store Mattermost performance data at regular intervals in a standard OpenMetrics format, without requiring third-party tool deployments. Data snapshots stored in a dump file can be consumed by a wide range of monitoring systems.",
+        "header": "Collect and store Antimatter performance data at regular intervals in a standard OpenMetrics format, without requiring third-party tool deployments. Data snapshots stored in a dump file can be consumed by a wide range of monitoring systems.",
         "settings": [
             {
                 "key": "Stats",

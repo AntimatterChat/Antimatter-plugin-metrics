@@ -22,14 +22,14 @@ import (
 
 	root "github.com/antimatterchat/antimatter-plugin-metrics"
 
-	mmModel "github.com/mattermost/mattermost/server/public/model"
+	amModel "github.com/mattermost/mattermost/server/public/model"
 	"github.com/mattermost/mattermost/server/public/plugin"
 	"github.com/mattermost/mattermost/server/public/pluginapi"
 	"github.com/mattermost/mattermost/server/public/pluginapi/cluster"
 	"github.com/mattermost/mattermost/server/v8/platform/shared/filestore"
 )
 
-// Plugin implements the interface expected by the Mattermost server to communicate between the server and plugin processes.
+// Plugin implements the interface expected by the Antimatter server to communicate between the server and plugin processes.
 type Plugin struct {
 	plugin.MattermostPlugin
 
@@ -79,9 +79,9 @@ func (p *Plugin) OnActivate() error {
 	fileSettings.SetDefaults(false) // some fields are nil, we should set those to default
 
 	// since this is true by default, and it will be true if it's actually false.
-	// see the discussion here: https://community.mattermost.com/core/pl/abd58h1majrx8y4xc9qrhtia9h
+	// see the discussion here: https://docs.antimatter.example/core/pl/abd58h1majrx8y4xc9qrhtia9h
 	if p.API.GetConfig().FileSettings.AmazonS3SSL == nil {
-		fileSettings.AmazonS3SSL = mmModel.NewBool(false)
+		fileSettings.AmazonS3SSL = amModel.NewBool(false)
 	}
 
 	fileBackendSettings := filestore.NewFileBackendSettingsFromConfig(fileSettings, false, true)
@@ -125,7 +125,7 @@ func (p *Plugin) OnActivate() error {
 	// The metrics plugin is dependent on the metrics endpoint being expoesed, so we need to ensure it is enabled.
 	if cfg := p.API.GetUnsanitizedConfig(); cfg.MetricsSettings.Enable == nil || !*cfg.MetricsSettings.Enable {
 		p.API.LogInfo("Enabling metrics...")
-		cfg.MetricsSettings.Enable = mmModel.NewBool(true)
+		cfg.MetricsSettings.Enable = amModel.NewBool(true)
 		if err2 := p.API.SaveConfig(cfg); err2 != nil {
 			return fmt.Errorf("failed to save config: %w", err2)
 		}
@@ -201,7 +201,7 @@ func (p *Plugin) OnActivate() error {
 			defer db.Close()
 		}
 
-		var currentList []*mmModel.ClusterDiscovery
+		var currentList []*amModel.ClusterDiscovery
 		for {
 			select {
 			case <-ticker.C:

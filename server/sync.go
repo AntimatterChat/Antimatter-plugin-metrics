@@ -22,7 +22,7 @@ type WriterFunc func(io.Reader, string) (int64, error)
 type ReaderFunc func(string) ([]byte, error)
 
 // syncFileStore does two periodic jobs and listens closeChan to exit from its loop.
-// 1. Synchronizes the local tsdb blocks with the remote filestore (mattermost-server)
+// 1. Synchronizes the local tsdb blocks with the remote filestore (Antimatter server)
 // 2. Periodically deletes the obsolete blocks from the remote filestore
 func (p *Plugin) syncFileStore() {
 	localStorageDir := p.db.Dir()
