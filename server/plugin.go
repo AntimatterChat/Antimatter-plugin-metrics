@@ -79,6 +79,7 @@ func (p *Plugin) OnActivate() error {
 	fileSettings.SetDefaults(false) // some fields are nil, we should set those to default
 
 	// since this is true by default, and it will be true if it's actually false.
+	// see the upstream discussion: https://community.mattermost.com/core/pl/abd58h1majrx8y4xc9qrhtia9h
 	if p.API.GetConfig().FileSettings.AmazonS3SSL == nil {
 		fileSettings.AmazonS3SSL = amModel.NewBool(false)
 	}
