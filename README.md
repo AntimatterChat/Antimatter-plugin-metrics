@@ -2,7 +2,7 @@
 
 The Antimatter Metrics Plugin is a versatile utility designed to collect and store various data points from the Antimatter application in [OpenMetrics](https://openmetrics.io/) format, similar to the functionality provided by [Prometheus](https://prometheus.io/). The primary purpose of this plugin is to facilitate troubleshooting by gathering metrics at regular intervals and allowing their inclusion in a dump file.
 
-See the [Antimatter Product Documentation](https://docs.antimatter.example/scale/collect-performance-metrics.html) for details on installing, configuring, enabling, and using this Antimatter integration.
+See the [Antimatter Product Documentation](https://antimatter.chat/docs/admins/apps.html#metrics) for details on installing, configuring, enabling, and using this Antimatter integration.
 
 ## How to Release
 
@@ -74,7 +74,7 @@ If you wish to contribute to the Antimatter Metrics Plugin, ensure you have the 
 - NodeJS: version **16.x**
 - NPM: version **7.x**
 
-Feel free to join the [Developers: Performance](https://docs.antimatter.example/core/channels/developers-performance) channel to engage in discussions related to the project.
+Feel free to join [AntimatterChat/community Discussions](https://github.com/AntimatterChat/community/discussions) to engage in discussions related to the project.
 
 ### License
 
